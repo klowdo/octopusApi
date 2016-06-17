@@ -25,7 +25,7 @@ fs.readFile('./server.json', function read(err, data) {
      * @param  {string} actopusurl - octopus-deploy-url
      * @param  {string} apikey     - apikey
      */
-    function octopus(actopusurl,apikey) {
+    function octopusapi(actopusurl,apikey) {
       this.actopusurl = actopusurl;
       this.apikey = apikey;
       var self = this;
@@ -57,7 +57,7 @@ fs.readFile('./server.json', function read(err, data) {
 
   }
 
-    module.exports = octopus;      `;
+    module.exports = octopusapi;      `;
     fs.writeFile(jsfile,beautify(file, { indent_size: 2 }),(err)=>{
       jsdoc2md({ src: jsfile}).pipe(fs.createWriteStream('readme.md'))
     })
@@ -92,11 +92,11 @@ function getFunc(url,name) {
   }
   return `
   /**
-   * octopus.prototype.${name} - ${name}
+   * octopusapi.prototype.${name} - ${name}
    *${ haveid?'\n  * @param  {string} id    -   id':''}${p?`\n   * @param  {object} params -    extra params {${parms}}`:''}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.${name} = function (${query}callback) {`+
+  octopusapi.prototype.${name} = function (${query}callback) {`+
     `${!p?'var params = {};\n':''}`+
     `${ haveid? `typeof id == 'function'? callback = id:params.id = id;`:''}`+
     `${ p? `if(params ==null){params = {}}else{if (typeof params == 'function') {callback = params;}}`:''}`+

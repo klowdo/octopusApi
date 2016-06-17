@@ -1,13 +1,16 @@
 {
-  "name": "'",
+  "name": "octopusapi",
   "version": "1.0.0",
-  "description": "''",
+  "description": "'octopusApi for deploy info'",
   "main": "index.js",
   "scripts": {
     "generate": "node generate.js",
     "test": "node test.js"
   },
-  "author": "",
+  "keywords": ["octopus-deploy-client", "octopus","octopusdeploy","deploy","octopusapi"],
+    "repository": "https://github.com/klowdo/octopusApi.git",
+    "homepage": "https://github.com/klowdo/octopusApi",
+  "author": "Felix Svensson <klowdo.fs@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "request": "^2.72.0"

@@ -15,31 +15,31 @@ var querystring = require('querystring');
  * @param  {string} actopusurl - octopus-deploy-url
  * @param  {string} apikey     - apikey
  */
-function octopus(actopusurl, apikey) {
+function octopusapi(actopusurl, apikey) {
   this.actopusurl = actopusurl;
   this.apikey = apikey;
   var self = this;
 
 
   /**
-   * octopus.prototype.Self - Self
+   * octopusapi.prototype.Self - Self
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Self = function(callback) {
+  octopusapi.prototype.Self = function(callback) {
     var params = {};
     get('/api', callback);
   };
 
 
   /**
-   * octopus.prototype.Accounts - Accounts
+   * octopusapi.prototype.Accounts - Accounts
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Accounts = function(id, params, callback) {
+  octopusapi.prototype.Accounts = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -53,13 +53,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.ActionTemplates - ActionTemplates
+   * octopusapi.prototype.ActionTemplates - ActionTemplates
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.ActionTemplates = function(id, params, callback) {
+  octopusapi.prototype.ActionTemplates = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -73,13 +73,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Alerts - Alerts
+   * octopusapi.prototype.Alerts - Alerts
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Alerts = function(id, params, callback) {
+  octopusapi.prototype.Alerts = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -93,13 +93,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Artifacts - Artifacts
+   * octopusapi.prototype.Artifacts - Artifacts
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,regarding}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Artifacts = function(id, params, callback) {
+  octopusapi.prototype.Artifacts = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -113,12 +113,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Channels - Channels
+   * octopusapi.prototype.Channels - Channels
    *
    * @param  {string} id    -   id
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Channels = function(id, callback) {
+  octopusapi.prototype.Channels = function(id, callback) {
     var params = {};
     typeof id == 'function' ? callback = id : params.id = id;
     get('/api/channels', params, callback);
@@ -126,13 +126,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Certificates - Certificates
+   * octopusapi.prototype.Certificates - Certificates
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Certificates = function(id, params, callback) {
+  octopusapi.prototype.Certificates = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -146,56 +146,56 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.CurrentUser - CurrentUser
+   * octopusapi.prototype.CurrentUser - CurrentUser
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.CurrentUser = function(callback) {
+  octopusapi.prototype.CurrentUser = function(callback) {
     var params = {};
     get('/api/users/me', callback);
   };
 
 
   /**
-   * octopus.prototype.CurrentLicense - CurrentLicense
+   * octopusapi.prototype.CurrentLicense - CurrentLicense
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.CurrentLicense = function(callback) {
+  octopusapi.prototype.CurrentLicense = function(callback) {
     var params = {};
     get('/api/licenses/licenses-current', callback);
   };
 
 
   /**
-   * octopus.prototype.Dashboard - Dashboard
+   * octopusapi.prototype.Dashboard - Dashboard
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Dashboard = function(callback) {
+  octopusapi.prototype.Dashboard = function(callback) {
     var params = {};
     get('/api/dashboard', callback);
   };
 
 
   /**
-   * octopus.prototype.DashboardConfiguration - DashboardConfiguration
+   * octopusapi.prototype.DashboardConfiguration - DashboardConfiguration
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.DashboardConfiguration = function(callback) {
+  octopusapi.prototype.DashboardConfiguration = function(callback) {
     var params = {};
     get('/api/dashboardconfiguration', callback);
   };
 
 
   /**
-   * octopus.prototype.DashboardDynamic - DashboardDynamic
+   * octopusapi.prototype.DashboardDynamic - DashboardDynamic
    *
    * @param  {object} params -    extra params {projects,environments,includePrevious}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.DashboardDynamic = function(params, callback) {
+  octopusapi.prototype.DashboardDynamic = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -208,12 +208,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.DeploymentProcesses - DeploymentProcesses
+   * octopusapi.prototype.DeploymentProcesses - DeploymentProcesses
    *
    * @param  {string} id    -   id
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.DeploymentProcesses = function(id, callback) {
+  octopusapi.prototype.DeploymentProcesses = function(id, callback) {
     var params = {};
     typeof id == 'function' ? callback = id : params.id = id;
     get('/api/deploymentprocesses', params, callback);
@@ -221,13 +221,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Deployments - Deployments
+   * octopusapi.prototype.Deployments - Deployments
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,take,projects,environments,taskState}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Deployments = function(id, params, callback) {
+  octopusapi.prototype.Deployments = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -241,12 +241,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.DiscoverMachine - DiscoverMachine
+   * octopusapi.prototype.DiscoverMachine - DiscoverMachine
    *
    * @param  {object} params -    extra params {host,port,type}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.DiscoverMachine = function(params, callback) {
+  octopusapi.prototype.DiscoverMachine = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -259,13 +259,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Environments - Environments
+   * octopusapi.prototype.Environments - Environments
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Environments = function(id, params, callback) {
+  octopusapi.prototype.Environments = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -279,24 +279,24 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.EnvironmentSortOrder - EnvironmentSortOrder
+   * octopusapi.prototype.EnvironmentSortOrder - EnvironmentSortOrder
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.EnvironmentSortOrder = function(callback) {
+  octopusapi.prototype.EnvironmentSortOrder = function(callback) {
     var params = {};
     get('/api/environments/sortorder', callback);
   };
 
 
   /**
-   * octopus.prototype.Events - Events
+   * octopusapi.prototype.Events - Events
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,regarding,modifier,user,from,to}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Events = function(id, params, callback) {
+  octopusapi.prototype.Events = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -310,13 +310,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.ExternalSecurityGroups - ExternalSecurityGroups
+   * octopusapi.prototype.ExternalSecurityGroups - ExternalSecurityGroups
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {name}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.ExternalSecurityGroups = function(id, params, callback) {
+  octopusapi.prototype.ExternalSecurityGroups = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -330,13 +330,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Feeds - Feeds
+   * octopusapi.prototype.Feeds - Feeds
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Feeds = function(id, params, callback) {
+  octopusapi.prototype.Feeds = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -350,13 +350,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Interruptions - Interruptions
+   * octopusapi.prototype.Interruptions - Interruptions
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,regarding,pendingOnly}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Interruptions = function(id, params, callback) {
+  octopusapi.prototype.Interruptions = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -370,24 +370,24 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Invitations - Invitations
+   * octopusapi.prototype.Invitations - Invitations
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Invitations = function(callback) {
+  octopusapi.prototype.Invitations = function(callback) {
     var params = {};
     get('/api/users/invitations', callback);
   };
 
 
   /**
-   * octopus.prototype.LibraryVariables - LibraryVariables
+   * octopusapi.prototype.LibraryVariables - LibraryVariables
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,contentType}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.LibraryVariables = function(id, params, callback) {
+  octopusapi.prototype.LibraryVariables = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -401,13 +401,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Lifecycles - Lifecycles
+   * octopusapi.prototype.Lifecycles - Lifecycles
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Lifecycles = function(id, params, callback) {
+  octopusapi.prototype.Lifecycles = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -421,24 +421,24 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.MachineRoles - MachineRoles
+   * octopusapi.prototype.MachineRoles - MachineRoles
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.MachineRoles = function(callback) {
+  octopusapi.prototype.MachineRoles = function(callback) {
     var params = {};
     get('/api/machineroles/all', callback);
   };
 
 
   /**
-   * octopus.prototype.Machines - Machines
+   * octopusapi.prototype.Machines - Machines
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,thumbprint}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Machines = function(id, params, callback) {
+  octopusapi.prototype.Machines = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -452,23 +452,23 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.MaintenanceConfiguration - MaintenanceConfiguration
+   * octopusapi.prototype.MaintenanceConfiguration - MaintenanceConfiguration
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.MaintenanceConfiguration = function(callback) {
+  octopusapi.prototype.MaintenanceConfiguration = function(callback) {
     var params = {};
     get('/api/maintenanceconfiguration', callback);
   };
 
 
   /**
-   * octopus.prototype.OctopusServerNodes - OctopusServerNodes
+   * octopusapi.prototype.OctopusServerNodes - OctopusServerNodes
    *
    * @param  {string} id    -   id
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.OctopusServerNodes = function(id, callback) {
+  octopusapi.prototype.OctopusServerNodes = function(id, callback) {
     var params = {};
     typeof id == 'function' ? callback = id : params.id = id;
     get('/api/octopusservernodes', params, callback);
@@ -476,13 +476,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Packages - Packages
+   * octopusapi.prototype.Packages - Packages
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {nuGetPackageId,filter,latest,skip,take,includeNotes}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Packages = function(id, params, callback) {
+  octopusapi.prototype.Packages = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -496,12 +496,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.PackagesBulk - PackagesBulk
+   * octopusapi.prototype.PackagesBulk - PackagesBulk
    *
    * @param  {object} params -    extra params {ids}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.PackagesBulk = function(params, callback) {
+  octopusapi.prototype.PackagesBulk = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -514,12 +514,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.PackageUpload - PackageUpload
+   * octopusapi.prototype.PackageUpload - PackageUpload
    *
    * @param  {object} params -    extra params {replace}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.PackageUpload = function(params, callback) {
+  octopusapi.prototype.PackageUpload = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -532,13 +532,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.ProjectGroups - ProjectGroups
+   * octopusapi.prototype.ProjectGroups - ProjectGroups
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.ProjectGroups = function(id, params, callback) {
+  octopusapi.prototype.ProjectGroups = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -552,13 +552,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Projects - Projects
+   * octopusapi.prototype.Projects - Projects
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,clone}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Projects = function(id, params, callback) {
+  octopusapi.prototype.Projects = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -572,12 +572,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.ProjectPulse - ProjectPulse
+   * octopusapi.prototype.ProjectPulse - ProjectPulse
    *
    * @param  {object} params -    extra params {projectIds}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.ProjectPulse = function(params, callback) {
+  octopusapi.prototype.ProjectPulse = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -590,24 +590,24 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Register - Register
+   * octopusapi.prototype.Register - Register
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Register = function(callback) {
+  octopusapi.prototype.Register = function(callback) {
     var params = {};
     get('/api/users/register', callback);
   };
 
 
   /**
-   * octopus.prototype.Releases - Releases
+   * octopusapi.prototype.Releases - Releases
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,ignoreChannelRules}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Releases = function(id, params, callback) {
+  octopusapi.prototype.Releases = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -621,23 +621,23 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.ServerStatus - ServerStatus
+   * octopusapi.prototype.ServerStatus - ServerStatus
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.ServerStatus = function(callback) {
+  octopusapi.prototype.ServerStatus = function(callback) {
     var params = {};
     get('/api/serverstatus', callback);
   };
 
 
   /**
-   * octopus.prototype.SignIn - SignIn
+   * octopusapi.prototype.SignIn - SignIn
    *
    * @param  {object} params -    extra params {returnUrl}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.SignIn = function(params, callback) {
+  octopusapi.prototype.SignIn = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -650,24 +650,24 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.SignOut - SignOut
+   * octopusapi.prototype.SignOut - SignOut
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.SignOut = function(callback) {
+  octopusapi.prototype.SignOut = function(callback) {
     var params = {};
     get('/api/users/logout', callback);
   };
 
 
   /**
-   * octopus.prototype.RetentionPolicies - RetentionPolicies
+   * octopusapi.prototype.RetentionPolicies - RetentionPolicies
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.RetentionPolicies = function(id, params, callback) {
+  octopusapi.prototype.RetentionPolicies = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -681,24 +681,24 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.SmtpConfiguration - SmtpConfiguration
+   * octopusapi.prototype.SmtpConfiguration - SmtpConfiguration
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.SmtpConfiguration = function(callback) {
+  octopusapi.prototype.SmtpConfiguration = function(callback) {
     var params = {};
     get('/api/smtpconfiguration', callback);
   };
 
 
   /**
-   * octopus.prototype.Tasks - Tasks
+   * octopusapi.prototype.Tasks - Tasks
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip,active,environment,project,name,node,running}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Tasks = function(id, params, callback) {
+  octopusapi.prototype.Tasks = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -712,13 +712,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Teams - Teams
+   * octopusapi.prototype.Teams - Teams
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Teams = function(id, params, callback) {
+  octopusapi.prototype.Teams = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -732,13 +732,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.UserRoles - UserRoles
+   * octopusapi.prototype.UserRoles - UserRoles
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.UserRoles = function(id, params, callback) {
+  octopusapi.prototype.UserRoles = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -752,13 +752,13 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.Users - Users
+   * octopusapi.prototype.Users - Users
    *
    * @param  {string} id    -   id
    * @param  {object} params -    extra params {skip}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Users = function(id, params, callback) {
+  octopusapi.prototype.Users = function(id, params, callback) {
     typeof id == 'function' ? callback = id : params.id = id;
     if (params == null) {
       params = {}
@@ -772,23 +772,23 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.PermissionDescriptions - PermissionDescriptions
+   * octopusapi.prototype.PermissionDescriptions - PermissionDescriptions
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.PermissionDescriptions = function(callback) {
+  octopusapi.prototype.PermissionDescriptions = function(callback) {
     var params = {};
     get('/api/permissions/all', callback);
   };
 
 
   /**
-   * octopus.prototype.Variables - Variables
+   * octopusapi.prototype.Variables - Variables
    *
    * @param  {string} id    -   id
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Variables = function(id, callback) {
+  octopusapi.prototype.Variables = function(id, callback) {
     var params = {};
     typeof id == 'function' ? callback = id : params.id = id;
     get('/api/variables', params, callback);
@@ -796,12 +796,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.VariableNames - VariableNames
+   * octopusapi.prototype.VariableNames - VariableNames
    *
    * @param  {object} params -    extra params {project}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.VariableNames = function(params, callback) {
+  octopusapi.prototype.VariableNames = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -814,23 +814,23 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.VariablesNonPrintableChars - VariablesNonPrintableChars
+   * octopusapi.prototype.VariablesNonPrintableChars - VariablesNonPrintableChars
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.VariablesNonPrintableChars = function(callback) {
+  octopusapi.prototype.VariablesNonPrintableChars = function(callback) {
     var params = {};
     get('/api/variables/nonPrintableChars', callback);
   };
 
 
   /**
-   * octopus.prototype.VersionRuleTest - VersionRuleTest
+   * octopusapi.prototype.VersionRuleTest - VersionRuleTest
    *
    * @param  {object} params -    extra params {version,versionRange,preReleaseTag}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.VersionRuleTest = function(params, callback) {
+  octopusapi.prototype.VersionRuleTest = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -843,12 +843,12 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.ReportingDeploymentsCountedByWeek - ReportingDeploymentsCountedByWeek
+   * octopusapi.prototype.ReportingDeploymentsCountedByWeek - ReportingDeploymentsCountedByWeek
    *
    * @param  {object} params -    extra params {projectIds}
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.ReportingDeploymentsCountedByWeek = function(params, callback) {
+  octopusapi.prototype.ReportingDeploymentsCountedByWeek = function(params, callback) {
     if (params == null) {
       params = {}
     } else {
@@ -861,22 +861,22 @@ function octopus(actopusurl, apikey) {
 
 
   /**
-   * octopus.prototype.RepositoryConfiguration - RepositoryConfiguration
+   * octopusapi.prototype.RepositoryConfiguration - RepositoryConfiguration
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.RepositoryConfiguration = function(callback) {
+  octopusapi.prototype.RepositoryConfiguration = function(callback) {
     var params = {};
     get('/api/repository/configuration', callback);
   };
 
 
   /**
-   * octopus.prototype.Web - Web
+   * octopusapi.prototype.Web - Web
    *
    * @param {callback} callback - A callback to run.
    */
-  octopus.prototype.Web = function(callback) {
+  octopusapi.prototype.Web = function(callback) {
     var params = {};
     get('/app', callback);
   };
@@ -902,4 +902,4 @@ function octopus(actopusurl, apikey) {
 
 }
 
-module.exports = octopus;
+module.exports = octopusapi;

@@ -1,24 +1,7 @@
-
-# Octopus deploy api
-
-### Example :
-```javascript
-var octpusApi = require('octpusApi');
-
-var client = new octpusApi('http{s}://youroctopusserver.domain:port}','yourApiKey')
-
-client.Projects((err,body)=>{
-  console.log(err);
-  console.log(body);
-})
-```
-
-## Api definitions:
-
 ## Functions
 
 <dl>
-<dt><a href="#octopus">octopus(actopusurl, apikey)</a></dt>
+<dt><a href="#octopusapi">octopusapi(actopusurl, apikey)</a></dt>
 <dd><p>octopus - description</p>
 </dd>
 </dl>
@@ -31,9 +14,9 @@ client.Projects((err,body)=>{
 </dd>
 </dl>
 
-<a name="octopus"></a>
+<a name="octopusapi"></a>
 
-## octopus(actopusurl, apikey)
+## octopusapi(actopusurl, apikey)
 octopus - description
 
 **Kind**: global function  
@@ -44,91 +27,78 @@ octopus - description
 | apikey | <code>string</code> | apikey |
 
 
-* [octopus(actopusurl, apikey)](#octopus)
-    * [.Self(callback)](#octopus+Self)
-    * [.Accounts(id, params, callback)](#octopus+Accounts)
-    * [.ActionTemplates(id, params, callback)](#octopus+ActionTemplates)
-    * [.Alerts(id, params, callback)](#octopus+Alerts)
-    * [.Artifacts(id, params, callback)](#octopus+Artifacts)
-    * [.Channels(id, callback)](#octopus+Channels)
-    * [.Certificates(id, params, callback)](#octopus+Certificates)
-    * [.CurrentUser(callback)](#octopus+CurrentUser)
-    * [.CurrentLicense(callback)](#octopus+CurrentLicense)
-    * [.Dashboard(callback)](#octopus+Dashboard)
-    * [.DashboardConfiguration(callback)](#octopus+DashboardConfiguration)
-    * [.DashboardDynamic(params, callback)](#octopus+DashboardDynamic)
-    * [.DeploymentProcesses(id, callback)](#octopus+DeploymentProcesses)
-    * [.Deployments(id, params, callback)](#octopus+Deployments)
-    * [.DiscoverMachine(params, callback)](#octopus+DiscoverMachine)
-    * [.Environments(id, params, callback)](#octopus+Environments)
-    * [.EnvironmentSortOrder(callback)](#octopus+EnvironmentSortOrder)
-    * [.Events(id, params, callback)](#octopus+Events)
-    * [.ExternalSecurityGroups(id, params, callback)](#octopus+ExternalSecurityGroups)
-    * [.Feeds(id, params, callback)](#octopus+Feeds)
-    * [.Interruptions(id, params, callback)](#octopus+Interruptions)
-    * [.Invitations(callback)](#octopus+Invitations)
-    * [.LibraryVariables(id, params, callback)](#octopus+LibraryVariables)
-    * [.Lifecycles(id, params, callback)](#octopus+Lifecycles)
-    * [.MachineRoles(callback)](#octopus+MachineRoles)
-    * [.Machines(id, params, callback)](#octopus+Machines)
-    * [.MaintenanceConfiguration(callback)](#octopus+MaintenanceConfiguration)
-    * [.OctopusServerNodes(id, callback)](#octopus+OctopusServerNodes)
-    * [.Packages(id, params, callback)](#octopus+Packages)
-    * [.PackagesBulk(params, callback)](#octopus+PackagesBulk)
-    * [.PackageUpload(params, callback)](#octopus+PackageUpload)
-    * [.ProjectGroups(id, params, callback)](#octopus+ProjectGroups)
-    * [.Projects(id, params, callback)](#octopus+Projects)
-    * [.ProjectPulse(params, callback)](#octopus+ProjectPulse)
-    * [.Register(callback)](#octopus+Register)
-    * [.Releases(id, params, callback)](#octopus+Releases)
-    * [.ServerStatus(callback)](#octopus+ServerStatus)
-    * [.SignIn(params, callback)](#octopus+SignIn)
-    * [.SignOut(callback)](#octopus+SignOut)
-    * [.RetentionPolicies(id, params, callback)](#octopus+RetentionPolicies)
-    * [.SmtpConfiguration(callback)](#octopus+SmtpConfiguration)
-    * [.Tasks(id, params, callback)](#octopus+Tasks)
-    * [.Teams(id, params, callback)](#octopus+Teams)
-    * [.UserRoles(id, params, callback)](#octopus+UserRoles)
-    * [.Users(id, params, callback)](#octopus+Users)
-    * [.PermissionDescriptions(callback)](#octopus+PermissionDescriptions)
-    * [.Variables(id, callback)](#octopus+Variables)
-    * [.VariableNames(params, callback)](#octopus+VariableNames)
-    * [.VariablesNonPrintableChars(callback)](#octopus+VariablesNonPrintableChars)
-    * [.VersionRuleTest(params, callback)](#octopus+VersionRuleTest)
-    * [.ReportingDeploymentsCountedByWeek(params, callback)](#octopus+ReportingDeploymentsCountedByWeek)
-    * [.RepositoryConfiguration(callback)](#octopus+RepositoryConfiguration)
-    * [.Web(callback)](#octopus+Web)
+* [octopusapi(actopusurl, apikey)](#octopusapi)
+    * [.Self(callback)](#octopusapi+Self)
+    * [.Accounts(id, params, callback)](#octopusapi+Accounts)
+    * [.ActionTemplates(id, params, callback)](#octopusapi+ActionTemplates)
+    * [.Alerts(id, params, callback)](#octopusapi+Alerts)
+    * [.Artifacts(id, params, callback)](#octopusapi+Artifacts)
+    * [.Channels(id, callback)](#octopusapi+Channels)
+    * [.Certificates(id, params, callback)](#octopusapi+Certificates)
+    * [.CurrentUser(callback)](#octopusapi+CurrentUser)
+    * [.CurrentLicense(callback)](#octopusapi+CurrentLicense)
+    * [.Dashboard(callback)](#octopusapi+Dashboard)
+    * [.DashboardConfiguration(callback)](#octopusapi+DashboardConfiguration)
+    * [.DashboardDynamic(params, callback)](#octopusapi+DashboardDynamic)
+    * [.DeploymentProcesses(id, callback)](#octopusapi+DeploymentProcesses)
+    * [.Deployments(id, params, callback)](#octopusapi+Deployments)
+    * [.DiscoverMachine(params, callback)](#octopusapi+DiscoverMachine)
+    * [.Environments(id, params, callback)](#octopusapi+Environments)
+    * [.EnvironmentSortOrder(callback)](#octopusapi+EnvironmentSortOrder)
+    * [.Events(id, params, callback)](#octopusapi+Events)
+    * [.ExternalSecurityGroups(id, params, callback)](#octopusapi+ExternalSecurityGroups)
+    * [.Feeds(id, params, callback)](#octopusapi+Feeds)
+    * [.Interruptions(id, params, callback)](#octopusapi+Interruptions)
+    * [.Invitations(callback)](#octopusapi+Invitations)
+    * [.LibraryVariables(id, params, callback)](#octopusapi+LibraryVariables)
+    * [.Lifecycles(id, params, callback)](#octopusapi+Lifecycles)
+    * [.MachineRoles(callback)](#octopusapi+MachineRoles)
+    * [.Machines(id, params, callback)](#octopusapi+Machines)
+    * [.MaintenanceConfiguration(callback)](#octopusapi+MaintenanceConfiguration)
+    * [.OctopusServerNodes(id, callback)](#octopusapi+OctopusServerNodes)
+    * [.Packages(id, params, callback)](#octopusapi+Packages)
+    * [.PackagesBulk(params, callback)](#octopusapi+PackagesBulk)
+    * [.PackageUpload(params, callback)](#octopusapi+PackageUpload)
+    * [.ProjectGroups(id, params, callback)](#octopusapi+ProjectGroups)
+    * [.Projects(id, params, callback)](#octopusapi+Projects)
+    * [.ProjectPulse(params, callback)](#octopusapi+ProjectPulse)
+    * [.Register(callback)](#octopusapi+Register)
+    * [.Releases(id, params, callback)](#octopusapi+Releases)
+    * [.ServerStatus(callback)](#octopusapi+ServerStatus)
+    * [.SignIn(params, callback)](#octopusapi+SignIn)
+    * [.SignOut(callback)](#octopusapi+SignOut)
+    * [.RetentionPolicies(id, params, callback)](#octopusapi+RetentionPolicies)
+    * [.SmtpConfiguration(callback)](#octopusapi+SmtpConfiguration)
+    * [.Tasks(id, params, callback)](#octopusapi+Tasks)
+    * [.Teams(id, params, callback)](#octopusapi+Teams)
+    * [.UserRoles(id, params, callback)](#octopusapi+UserRoles)
+    * [.Users(id, params, callback)](#octopusapi+Users)
+    * [.PermissionDescriptions(callback)](#octopusapi+PermissionDescriptions)
+    * [.Variables(id, callback)](#octopusapi+Variables)
+    * [.VariableNames(params, callback)](#octopusapi+VariableNames)
+    * [.VariablesNonPrintableChars(callback)](#octopusapi+VariablesNonPrintableChars)
+    * [.VersionRuleTest(params, callback)](#octopusapi+VersionRuleTest)
+    * [.ReportingDeploymentsCountedByWeek(params, callback)](#octopusapi+ReportingDeploymentsCountedByWeek)
+    * [.RepositoryConfiguration(callback)](#octopusapi+RepositoryConfiguration)
+    * [.Web(callback)](#octopusapi+Web)
 
-<a name="octopus+Self"></a>
+<a name="octopusapi+Self"></a>
 
-### octopus.Self(callback)
-octopus.prototype.Self - Self
+### octopusapi.Self(callback)
+octopusapi.prototype.Self - Self
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Accounts"></a>
+<a name="octopusapi+Accounts"></a>
 
-### octopus.Accounts(id, params, callback)
-octopus.prototype.Accounts - Accounts
+### octopusapi.Accounts(id, params, callback)
+octopusapi.prototype.Accounts - Accounts
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | id |
-| params | <code>object</code> | extra params {skip} |
-| callback | <code>[callback](#callback)</code> | A callback to run. |
-
-<a name="octopus+ActionTemplates"></a>
-
-### octopus.ActionTemplates(id, params, callback)
-octopus.prototype.ActionTemplates - ActionTemplates
-
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -136,12 +106,12 @@ octopus.prototype.ActionTemplates - ActionTemplates
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Alerts"></a>
+<a name="octopusapi+ActionTemplates"></a>
 
-### octopus.Alerts(id, params, callback)
-octopus.prototype.Alerts - Alerts
+### octopusapi.ActionTemplates(id, params, callback)
+octopusapi.prototype.ActionTemplates - ActionTemplates
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -149,12 +119,25 @@ octopus.prototype.Alerts - Alerts
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Artifacts"></a>
+<a name="octopusapi+Alerts"></a>
 
-### octopus.Artifacts(id, params, callback)
-octopus.prototype.Artifacts - Artifacts
+### octopusapi.Alerts(id, params, callback)
+octopusapi.prototype.Alerts - Alerts
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | id |
+| params | <code>object</code> | extra params {skip} |
+| callback | <code>[callback](#callback)</code> | A callback to run. |
+
+<a name="octopusapi+Artifacts"></a>
+
+### octopusapi.Artifacts(id, params, callback)
+octopusapi.prototype.Artifacts - Artifacts
+
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -162,24 +145,24 @@ octopus.prototype.Artifacts - Artifacts
 | params | <code>object</code> | extra params {skip,regarding} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Channels"></a>
+<a name="octopusapi+Channels"></a>
 
-### octopus.Channels(id, callback)
-octopus.prototype.Channels - Channels
+### octopusapi.Channels(id, callback)
+octopusapi.prototype.Channels - Channels
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | id |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Certificates"></a>
+<a name="octopusapi+Certificates"></a>
 
-### octopus.Certificates(id, params, callback)
-octopus.prototype.Certificates - Certificates
+### octopusapi.Certificates(id, params, callback)
+octopusapi.prototype.Certificates - Certificates
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -187,80 +170,80 @@ octopus.prototype.Certificates - Certificates
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+CurrentUser"></a>
+<a name="octopusapi+CurrentUser"></a>
 
-### octopus.CurrentUser(callback)
-octopus.prototype.CurrentUser - CurrentUser
+### octopusapi.CurrentUser(callback)
+octopusapi.prototype.CurrentUser - CurrentUser
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| callback | <code>[callback](#callback)</code> | A callback to run. |
-
-<a name="octopus+CurrentLicense"></a>
-
-### octopus.CurrentLicense(callback)
-octopus.prototype.CurrentLicense - CurrentLicense
-
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Dashboard"></a>
+<a name="octopusapi+CurrentLicense"></a>
 
-### octopus.Dashboard(callback)
-octopus.prototype.Dashboard - Dashboard
+### octopusapi.CurrentLicense(callback)
+octopusapi.prototype.CurrentLicense - CurrentLicense
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| callback | <code>[callback](#callback)</code> | A callback to run. |
-
-<a name="octopus+DashboardConfiguration"></a>
-
-### octopus.DashboardConfiguration(callback)
-octopus.prototype.DashboardConfiguration - DashboardConfiguration
-
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+DashboardDynamic"></a>
+<a name="octopusapi+Dashboard"></a>
 
-### octopus.DashboardDynamic(params, callback)
-octopus.prototype.DashboardDynamic - DashboardDynamic
+### octopusapi.Dashboard(callback)
+octopusapi.prototype.Dashboard - Dashboard
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| callback | <code>[callback](#callback)</code> | A callback to run. |
+
+<a name="octopusapi+DashboardConfiguration"></a>
+
+### octopusapi.DashboardConfiguration(callback)
+octopusapi.prototype.DashboardConfiguration - DashboardConfiguration
+
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| callback | <code>[callback](#callback)</code> | A callback to run. |
+
+<a name="octopusapi+DashboardDynamic"></a>
+
+### octopusapi.DashboardDynamic(params, callback)
+octopusapi.prototype.DashboardDynamic - DashboardDynamic
+
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {projects,environments,includePrevious} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+DeploymentProcesses"></a>
+<a name="octopusapi+DeploymentProcesses"></a>
 
-### octopus.DeploymentProcesses(id, callback)
-octopus.prototype.DeploymentProcesses - DeploymentProcesses
+### octopusapi.DeploymentProcesses(id, callback)
+octopusapi.prototype.DeploymentProcesses - DeploymentProcesses
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | id |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Deployments"></a>
+<a name="octopusapi+Deployments"></a>
 
-### octopus.Deployments(id, params, callback)
-octopus.prototype.Deployments - Deployments
+### octopusapi.Deployments(id, params, callback)
+octopusapi.prototype.Deployments - Deployments
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -268,24 +251,24 @@ octopus.prototype.Deployments - Deployments
 | params | <code>object</code> | extra params {skip,take,projects,environments,taskState} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+DiscoverMachine"></a>
+<a name="octopusapi+DiscoverMachine"></a>
 
-### octopus.DiscoverMachine(params, callback)
-octopus.prototype.DiscoverMachine - DiscoverMachine
+### octopusapi.DiscoverMachine(params, callback)
+octopusapi.prototype.DiscoverMachine - DiscoverMachine
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {host,port,type} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Environments"></a>
+<a name="octopusapi+Environments"></a>
 
-### octopus.Environments(id, params, callback)
-octopus.prototype.Environments - Environments
+### octopusapi.Environments(id, params, callback)
+octopusapi.prototype.Environments - Environments
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -293,23 +276,23 @@ octopus.prototype.Environments - Environments
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+EnvironmentSortOrder"></a>
+<a name="octopusapi+EnvironmentSortOrder"></a>
 
-### octopus.EnvironmentSortOrder(callback)
-octopus.prototype.EnvironmentSortOrder - EnvironmentSortOrder
+### octopusapi.EnvironmentSortOrder(callback)
+octopusapi.prototype.EnvironmentSortOrder - EnvironmentSortOrder
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Events"></a>
+<a name="octopusapi+Events"></a>
 
-### octopus.Events(id, params, callback)
-octopus.prototype.Events - Events
+### octopusapi.Events(id, params, callback)
+octopusapi.prototype.Events - Events
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -317,12 +300,12 @@ octopus.prototype.Events - Events
 | params | <code>object</code> | extra params {skip,regarding,modifier,user,from,to} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+ExternalSecurityGroups"></a>
+<a name="octopusapi+ExternalSecurityGroups"></a>
 
-### octopus.ExternalSecurityGroups(id, params, callback)
-octopus.prototype.ExternalSecurityGroups - ExternalSecurityGroups
+### octopusapi.ExternalSecurityGroups(id, params, callback)
+octopusapi.prototype.ExternalSecurityGroups - ExternalSecurityGroups
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -330,12 +313,12 @@ octopus.prototype.ExternalSecurityGroups - ExternalSecurityGroups
 | params | <code>object</code> | extra params {name} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Feeds"></a>
+<a name="octopusapi+Feeds"></a>
 
-### octopus.Feeds(id, params, callback)
-octopus.prototype.Feeds - Feeds
+### octopusapi.Feeds(id, params, callback)
+octopusapi.prototype.Feeds - Feeds
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -343,12 +326,12 @@ octopus.prototype.Feeds - Feeds
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Interruptions"></a>
+<a name="octopusapi+Interruptions"></a>
 
-### octopus.Interruptions(id, params, callback)
-octopus.prototype.Interruptions - Interruptions
+### octopusapi.Interruptions(id, params, callback)
+octopusapi.prototype.Interruptions - Interruptions
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -356,23 +339,23 @@ octopus.prototype.Interruptions - Interruptions
 | params | <code>object</code> | extra params {skip,regarding,pendingOnly} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Invitations"></a>
+<a name="octopusapi+Invitations"></a>
 
-### octopus.Invitations(callback)
-octopus.prototype.Invitations - Invitations
+### octopusapi.Invitations(callback)
+octopusapi.prototype.Invitations - Invitations
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+LibraryVariables"></a>
+<a name="octopusapi+LibraryVariables"></a>
 
-### octopus.LibraryVariables(id, params, callback)
-octopus.prototype.LibraryVariables - LibraryVariables
+### octopusapi.LibraryVariables(id, params, callback)
+octopusapi.prototype.LibraryVariables - LibraryVariables
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -380,12 +363,12 @@ octopus.prototype.LibraryVariables - LibraryVariables
 | params | <code>object</code> | extra params {skip,contentType} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Lifecycles"></a>
+<a name="octopusapi+Lifecycles"></a>
 
-### octopus.Lifecycles(id, params, callback)
-octopus.prototype.Lifecycles - Lifecycles
+### octopusapi.Lifecycles(id, params, callback)
+octopusapi.prototype.Lifecycles - Lifecycles
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -393,23 +376,23 @@ octopus.prototype.Lifecycles - Lifecycles
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+MachineRoles"></a>
+<a name="octopusapi+MachineRoles"></a>
 
-### octopus.MachineRoles(callback)
-octopus.prototype.MachineRoles - MachineRoles
+### octopusapi.MachineRoles(callback)
+octopusapi.prototype.MachineRoles - MachineRoles
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Machines"></a>
+<a name="octopusapi+Machines"></a>
 
-### octopus.Machines(id, params, callback)
-octopus.prototype.Machines - Machines
+### octopusapi.Machines(id, params, callback)
+octopusapi.prototype.Machines - Machines
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -417,35 +400,35 @@ octopus.prototype.Machines - Machines
 | params | <code>object</code> | extra params {skip,thumbprint} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+MaintenanceConfiguration"></a>
+<a name="octopusapi+MaintenanceConfiguration"></a>
 
-### octopus.MaintenanceConfiguration(callback)
-octopus.prototype.MaintenanceConfiguration - MaintenanceConfiguration
+### octopusapi.MaintenanceConfiguration(callback)
+octopusapi.prototype.MaintenanceConfiguration - MaintenanceConfiguration
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+OctopusServerNodes"></a>
+<a name="octopusapi+OctopusServerNodes"></a>
 
-### octopus.OctopusServerNodes(id, callback)
-octopus.prototype.OctopusServerNodes - OctopusServerNodes
+### octopusapi.OctopusServerNodes(id, callback)
+octopusapi.prototype.OctopusServerNodes - OctopusServerNodes
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | id |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Packages"></a>
+<a name="octopusapi+Packages"></a>
 
-### octopus.Packages(id, params, callback)
-octopus.prototype.Packages - Packages
+### octopusapi.Packages(id, params, callback)
+octopusapi.prototype.Packages - Packages
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -453,36 +436,36 @@ octopus.prototype.Packages - Packages
 | params | <code>object</code> | extra params {nuGetPackageId,filter,latest,skip,take,includeNotes} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+PackagesBulk"></a>
+<a name="octopusapi+PackagesBulk"></a>
 
-### octopus.PackagesBulk(params, callback)
-octopus.prototype.PackagesBulk - PackagesBulk
+### octopusapi.PackagesBulk(params, callback)
+octopusapi.prototype.PackagesBulk - PackagesBulk
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {ids} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+PackageUpload"></a>
+<a name="octopusapi+PackageUpload"></a>
 
-### octopus.PackageUpload(params, callback)
-octopus.prototype.PackageUpload - PackageUpload
+### octopusapi.PackageUpload(params, callback)
+octopusapi.prototype.PackageUpload - PackageUpload
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {replace} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+ProjectGroups"></a>
+<a name="octopusapi+ProjectGroups"></a>
 
-### octopus.ProjectGroups(id, params, callback)
-octopus.prototype.ProjectGroups - ProjectGroups
+### octopusapi.ProjectGroups(id, params, callback)
+octopusapi.prototype.ProjectGroups - ProjectGroups
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -490,12 +473,12 @@ octopus.prototype.ProjectGroups - ProjectGroups
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Projects"></a>
+<a name="octopusapi+Projects"></a>
 
-### octopus.Projects(id, params, callback)
-octopus.prototype.Projects - Projects
+### octopusapi.Projects(id, params, callback)
+octopusapi.prototype.Projects - Projects
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -503,35 +486,35 @@ octopus.prototype.Projects - Projects
 | params | <code>object</code> | extra params {skip,clone} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+ProjectPulse"></a>
+<a name="octopusapi+ProjectPulse"></a>
 
-### octopus.ProjectPulse(params, callback)
-octopus.prototype.ProjectPulse - ProjectPulse
+### octopusapi.ProjectPulse(params, callback)
+octopusapi.prototype.ProjectPulse - ProjectPulse
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {projectIds} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Register"></a>
+<a name="octopusapi+Register"></a>
 
-### octopus.Register(callback)
-octopus.prototype.Register - Register
+### octopusapi.Register(callback)
+octopusapi.prototype.Register - Register
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Releases"></a>
+<a name="octopusapi+Releases"></a>
 
-### octopus.Releases(id, params, callback)
-octopus.prototype.Releases - Releases
+### octopusapi.Releases(id, params, callback)
+octopusapi.prototype.Releases - Releases
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -539,46 +522,46 @@ octopus.prototype.Releases - Releases
 | params | <code>object</code> | extra params {skip,ignoreChannelRules} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+ServerStatus"></a>
+<a name="octopusapi+ServerStatus"></a>
 
-### octopus.ServerStatus(callback)
-octopus.prototype.ServerStatus - ServerStatus
+### octopusapi.ServerStatus(callback)
+octopusapi.prototype.ServerStatus - ServerStatus
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+SignIn"></a>
+<a name="octopusapi+SignIn"></a>
 
-### octopus.SignIn(params, callback)
-octopus.prototype.SignIn - SignIn
+### octopusapi.SignIn(params, callback)
+octopusapi.prototype.SignIn - SignIn
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {returnUrl} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+SignOut"></a>
+<a name="octopusapi+SignOut"></a>
 
-### octopus.SignOut(callback)
-octopus.prototype.SignOut - SignOut
+### octopusapi.SignOut(callback)
+octopusapi.prototype.SignOut - SignOut
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+RetentionPolicies"></a>
+<a name="octopusapi+RetentionPolicies"></a>
 
-### octopus.RetentionPolicies(id, params, callback)
-octopus.prototype.RetentionPolicies - RetentionPolicies
+### octopusapi.RetentionPolicies(id, params, callback)
+octopusapi.prototype.RetentionPolicies - RetentionPolicies
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -586,23 +569,23 @@ octopus.prototype.RetentionPolicies - RetentionPolicies
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+SmtpConfiguration"></a>
+<a name="octopusapi+SmtpConfiguration"></a>
 
-### octopus.SmtpConfiguration(callback)
-octopus.prototype.SmtpConfiguration - SmtpConfiguration
+### octopusapi.SmtpConfiguration(callback)
+octopusapi.prototype.SmtpConfiguration - SmtpConfiguration
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Tasks"></a>
+<a name="octopusapi+Tasks"></a>
 
-### octopus.Tasks(id, params, callback)
-octopus.prototype.Tasks - Tasks
+### octopusapi.Tasks(id, params, callback)
+octopusapi.prototype.Tasks - Tasks
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -610,25 +593,12 @@ octopus.prototype.Tasks - Tasks
 | params | <code>object</code> | extra params {skip,active,environment,project,name,node,running} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Teams"></a>
+<a name="octopusapi+Teams"></a>
 
-### octopus.Teams(id, params, callback)
-octopus.prototype.Teams - Teams
+### octopusapi.Teams(id, params, callback)
+octopusapi.prototype.Teams - Teams
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | id |
-| params | <code>object</code> | extra params {skip} |
-| callback | <code>[callback](#callback)</code> | A callback to run. |
-
-<a name="octopus+UserRoles"></a>
-
-### octopus.UserRoles(id, params, callback)
-octopus.prototype.UserRoles - UserRoles
-
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -636,12 +606,12 @@ octopus.prototype.UserRoles - UserRoles
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Users"></a>
+<a name="octopusapi+UserRoles"></a>
 
-### octopus.Users(id, params, callback)
-octopus.prototype.Users - Users
+### octopusapi.UserRoles(id, params, callback)
+octopusapi.prototype.UserRoles - UserRoles
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -649,93 +619,106 @@ octopus.prototype.Users - Users
 | params | <code>object</code> | extra params {skip} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+PermissionDescriptions"></a>
+<a name="octopusapi+Users"></a>
 
-### octopus.PermissionDescriptions(callback)
-octopus.prototype.PermissionDescriptions - PermissionDescriptions
+### octopusapi.Users(id, params, callback)
+octopusapi.prototype.Users - Users
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | id |
+| params | <code>object</code> | extra params {skip} |
+| callback | <code>[callback](#callback)</code> | A callback to run. |
+
+<a name="octopusapi+PermissionDescriptions"></a>
+
+### octopusapi.PermissionDescriptions(callback)
+octopusapi.prototype.PermissionDescriptions - PermissionDescriptions
+
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Variables"></a>
+<a name="octopusapi+Variables"></a>
 
-### octopus.Variables(id, callback)
-octopus.prototype.Variables - Variables
+### octopusapi.Variables(id, callback)
+octopusapi.prototype.Variables - Variables
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | id |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+VariableNames"></a>
+<a name="octopusapi+VariableNames"></a>
 
-### octopus.VariableNames(params, callback)
-octopus.prototype.VariableNames - VariableNames
+### octopusapi.VariableNames(params, callback)
+octopusapi.prototype.VariableNames - VariableNames
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {project} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+VariablesNonPrintableChars"></a>
+<a name="octopusapi+VariablesNonPrintableChars"></a>
 
-### octopus.VariablesNonPrintableChars(callback)
-octopus.prototype.VariablesNonPrintableChars - VariablesNonPrintableChars
+### octopusapi.VariablesNonPrintableChars(callback)
+octopusapi.prototype.VariablesNonPrintableChars - VariablesNonPrintableChars
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+VersionRuleTest"></a>
+<a name="octopusapi+VersionRuleTest"></a>
 
-### octopus.VersionRuleTest(params, callback)
-octopus.prototype.VersionRuleTest - VersionRuleTest
+### octopusapi.VersionRuleTest(params, callback)
+octopusapi.prototype.VersionRuleTest - VersionRuleTest
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {version,versionRange,preReleaseTag} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+ReportingDeploymentsCountedByWeek"></a>
+<a name="octopusapi+ReportingDeploymentsCountedByWeek"></a>
 
-### octopus.ReportingDeploymentsCountedByWeek(params, callback)
-octopus.prototype.ReportingDeploymentsCountedByWeek - ReportingDeploymentsCountedByWeek
+### octopusapi.ReportingDeploymentsCountedByWeek(params, callback)
+octopusapi.prototype.ReportingDeploymentsCountedByWeek - ReportingDeploymentsCountedByWeek
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | extra params {projectIds} |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+RepositoryConfiguration"></a>
+<a name="octopusapi+RepositoryConfiguration"></a>
 
-### octopus.RepositoryConfiguration(callback)
-octopus.prototype.RepositoryConfiguration - RepositoryConfiguration
+### octopusapi.RepositoryConfiguration(callback)
+octopusapi.prototype.RepositoryConfiguration - RepositoryConfiguration
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | callback | <code>[callback](#callback)</code> | A callback to run. |
 
-<a name="octopus+Web"></a>
+<a name="octopusapi+Web"></a>
 
-### octopus.Web(callback)
-octopus.prototype.Web - Web
+### octopusapi.Web(callback)
+octopusapi.prototype.Web - Web
 
-**Kind**: instance method of <code>[octopus](#octopus)</code>  
+**Kind**: instance method of <code>[octopusapi](#octopusapi)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
