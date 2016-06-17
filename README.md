@@ -1,3 +1,19 @@
+
+# Octopus deploy api 
+ 
+### Example : 
+```javascript 
+var octpusapi = require('octpusapi'); 
+ 
+var client = new octpusapi('http{s}://youroctopusserver.domain:port}','yourApiKey') 
+ 
+client.Projects((err,body)=>{ 
+  console.log(err); 
+  console.log(body); 
+}) 
+``` 
+ 
+## Api definitions: 
 ## Functions
 
 <dl>
