@@ -1,6 +1,6 @@
 {
   "name": "octopusapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "'octopusApi for deploy info'",
   "main": "index.js",
   "scripts": {
